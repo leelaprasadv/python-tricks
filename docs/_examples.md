@@ -7,8 +7,6 @@ outline: false
 
 In the meantime, you might want to:
 - Check our [Getting Started](/guides/getting-started) guide
-- Browse other [available snippets](/snippets/)
-- [Contribute](https://github.com/your-repo) to this documentation
 :::
 
 ::: details Why am I seeing this?
