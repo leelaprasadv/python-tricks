@@ -6,6 +6,7 @@ export default defineConfig({
   description: "A personal collection of cool and best python tricks and one-liner code snippets",
   lastUpdated: true,
   ignoreDeadLinks: 'localhostLinks',
+  base: '/python-tricks/',
   head: [
     // ['meta', { property: 'og:image', content: 'https://docs.testbeats.com/logo.png' }]
     ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
