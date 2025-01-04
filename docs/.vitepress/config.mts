@@ -9,7 +9,7 @@ export default defineConfig({
   base: '/python-tricks/',
   head: [
     // ['meta', { property: 'og:image', content: 'https://docs.testbeats.com/logo.png' }]
-    ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
+    ["link", { rel: "icon", href: "/python-tricks/favicon.svg", type: "image/svg+xml" }],
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
