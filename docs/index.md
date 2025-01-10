@@ -11,8 +11,8 @@ hero:
       text: Get Started
       link: /guides/getting-started
     - theme: alt
-      text: Practice Problems
-      link: /practice/problems
+      text: Practice Exercises
+      link: /practice/exercises
 
 # features:
 #   - title: Feature A

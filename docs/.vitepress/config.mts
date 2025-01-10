@@ -19,7 +19,7 @@ export default defineConfig({
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Practice Problems', link: '/practice/problems' },
+      { text: 'Practice Exercises', link: '/practice/exercises' },
     ],
 
     sidebar: [
