@@ -33,6 +33,19 @@ def fib(n):
 
 print(list(fib(10)))
 ```
+
+```python [Using Recursion]
+def fib(n):
+    if n <= 1:
+        return n
+    return fib(n-1) + fib(n-2)
+
+
+nfib = 10 # n Fibonacci numbers
+
+for i in range(nfib):
+    print(fib(i), end=" ")
+```
 :::
 
 ## Balanced Brackets
