@@ -275,6 +275,51 @@ is_armstrong(153)
 :::
 
 
+## FizzBuzz Program
+
+FizzBuzz is a simple and popular code challenge. It states that, a number:
+- is divisible by 3, print "Fizz"
+- is divisible by 5, print "Buzz"
+- is divisible by both, print "FizzBuzz"
+
+
+::: details Solution
+```python
+def fizz_buss(n):
+    for i in range(1, n+1):
+        if i % 15 == 0:
+            print("FizzBuzz")
+        elif i % 3 == 0:
+            print("Fizz")
+        elif i % 5 == 0:
+            print("Buzz")
+        else:
+            print(i)
+
+fizz_buss(15)
+```
+:::
+
+::: details Output
+```bash
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+```
+:::
+
 ## Print staircase pattern 
 Given the number of steps, print the steps in a staircase
 
