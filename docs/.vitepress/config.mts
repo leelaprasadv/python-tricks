@@ -33,10 +33,10 @@ export default defineConfig({
         text: 'Python Tricks',
         items: [
           { text: 'Strings', link: '/snippets/strings' },
-          // { text: 'Lists', link: '/snippets/lists' },
+          // { text: 'Conditions', link: '/snippets/conditions' },
           // { text: 'Dictionaries', link: '/snippets/dictionaries' },
           // { text: 'Sets', link: '/snippets/sets' },
-          // { text: 'Tuples', link: '/snippets/tuples' },
+          { text: 'Tuples', link: '/snippets/tuples' },
         ]
       }
     ],
