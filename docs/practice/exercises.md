@@ -5,6 +5,75 @@ outline: deep
 # Python Excercies
 
 
+## Max Profit from stock prices
+
+Given an array `stock_prices[]`, where `stock_prices[i]` represents the stock price on day `i`, find the maximum profit you can achieve by buying on one day and selling on a later day.
+
+```
+Input: stock_prices = [7,2,1,3,4,9,1]
+Output: 8 (i.e Buy on Day: 3, and Sell on Day: 6 for Profit: 8)
+
+```
+
+::: details Solution
+::: code-group
+```python [One Pass]
+# One pass through the stock prices. Time: O(n), Space: O(1)
+def calculate_max_profit(prices):
+    max_profit = 0
+    min_price = prices[0]
+
+    for _, curr_price in enumerate(prices):
+        if curr_price < min_price:
+            min_price = curr_price
+
+        if (curr_price - min_price) > max_profit:
+            max_profit = max(curr_price-min_price, max_profit)
+
+    return max_profit
+
+print(calculate_max_profit(stock_prices))
+```
+
+```python [One Pass - Optimised]
+# One pass through the stock prices. Time: O(n), Space: O(1)
+def calculate_max_profit(prices):
+    max_profit = 0
+    min_price = prices[0]  # or float('inf)
+
+    for curr_price in prices:
+        min_price = min(min_price, curr_price)
+        max_profit = max(curr_price-min_price, max_profit)
+
+    return max_profit
+
+print(calculate_max_profit(stock_prices))
+```
+
+```python [With buy/sell details]
+def calculate_max_profit_with_details(prices):
+    buy_index = sell_index = 0
+    max_profit = 0
+    min_price = prices[0]
+
+    for idx, curr_price in enumerate(prices):
+        if curr_price < min_price:
+            min_price = curr_price
+            buy_index = idx + 1
+
+        if (curr_price - min_price) > max_profit:
+            max_profit = max(curr_price-min_price, max_profit)
+            sell_index = idx + 1
+
+    return buy_index, sell_index, max_profit
+
+
+buy_day, sell_day, max_profit = calculate_max_profit_with_details(stock_prices)
+print(f"For Max Profit, Buy on Day: {buy_day}, and Sell on Day: {sell_day} for Profit: {max_profit}")
+```
+:::
+
+
 ## Fibonacci numbers
 Print n fibonacci numbers 
 ```
