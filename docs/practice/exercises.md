@@ -74,6 +74,37 @@ print(f"For Max Profit, Buy on Day: {buy_day}, and Sell on Day: {sell_day} for P
 :::
 
 
+## Binary Search
+Binary search. Time: O(log N) , Space: O(1)
+```
+Input: list = [7,2,1,3,4,9,1], target = 9
+Output: 5   # Index of element 9
+```
+
+::: details Solution
+::: code-group
+```python [Basic]
+_input = [7,2,1,3,4,9,1]
+
+def binary_search(target, search_list):
+    left = 0
+    right = len(search_list)-1
+
+    while left <= right:
+        mid = (left + right) // 2
+        if search_list[mid] == target:
+            return mid
+        elif mid < target:
+            left = mid +1
+        else:
+            right = mid-1
+    return -1
+
+print(binary_search(9, _input))
+```
+:::
+
+
 ## Fibonacci numbers
 Print n fibonacci numbers 
 ```
