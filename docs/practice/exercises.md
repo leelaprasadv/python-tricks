@@ -5,6 +5,38 @@ outline: deep
 # Python Excercies
 
 
+## Backspace Compare
+Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
+
+```
+Input: s='ab#c' , t = 'adb##c'
+Output: True
+```
+
+::: details Solution
+::: code-group
+```python [Basic]
+s='ab#c'
+t = 'adb##c'
+
+def backspace_compare(s, t):
+    def process_str(input_str):
+        skip = 0
+        result = []
+        for char in input_str[::-1]:
+            if char == "#":
+                skip += 1
+            elif skip > 0:
+                skip -= 1
+            else:
+                result.append(char)
+        return "".join(result)
+    return process_str(s) == process_str(t)
+
+print(backspace_compare(s, t))
+```
+:::
+
 ## Max Profit from stock prices
 
 Given an array `stock_prices[]`, where `stock_prices[i]` represents the stock price on day `i`, find the maximum profit you can achieve by buying on one day and selling on a later day.
@@ -84,7 +116,7 @@ Output: 5   # Index of element 9
 ::: details Solution
 ::: code-group
 ```python [Basic]
-_input = [7,2,1,3,4,9,1]
+_input = [1, 2, 3, 4, 6, 7, 9]
 
 def binary_search(target, search_list):
     left = 0
@@ -94,7 +126,7 @@ def binary_search(target, search_list):
         mid = (left + right) // 2
         if search_list[mid] == target:
             return mid
-        elif mid < target:
+        elif search_list[mid] < target:
             left = mid +1
         else:
             right = mid-1
